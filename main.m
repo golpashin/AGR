@@ -278,7 +278,7 @@ else
 end
 
 %% Train the Agent
-trainingStats = train(agent, env, trainOpts, Logger=logger);
+trainingStats = train(agent, env, trainOpts, Logger=logger); % Note: some MATLAB versions may need Logger=logger to be left as [], if error encountered. 
 
 %% Save Training Results
 save('FinalAgent.mat', 'agent');
