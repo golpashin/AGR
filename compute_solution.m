@@ -133,8 +133,7 @@ function [V, u, I, Iu] = compute_solution(x, n, param)
     end
 
     % Construct the control interpolation model for the current grid
-    Iu = scatteredInterpolant(x(1, :)', x(2, :)', u', 'natural'); % control is discontinuous     
-
+    Iu = scatteredInterpolant(x(1, :)', x(2, :)', u', 'natural');
     % Save solution data to file
     save('precomputed_solution.mat', 'x', 'n', 'V', 'u', 'I', 'Iu');
     
